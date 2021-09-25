@@ -16,10 +16,8 @@ or
 
 3. Create a file **.env.local** in order to manage the environment variables with this structure:
 
-`
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-`
+`NEXT_PUBLIC_SUPABASE_URL=your_supabase_url`
+`NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key`
 
 # Run unit tests
 
