@@ -1,6 +1,6 @@
 # Information
 
-The demo has been developed in **React** using **Next.js** and **Typescript**, styling with **TailwindCSS** and storing the data in **Supabase** including realtime integration. It was used **Jest** and **React Testing Library** for unit testing and **Cypress** for integration and E2E testing.
+The demo has been developed in **React** using **Next.js** and **Typescript**, styling with **TailwindCSS**, storing the data in **Supabase** including realtime integration and deployed with CI/CD on **Vercel**. It was used **Jest** and **React Testing Library** for unit testing and **Cypress** for integration and E2E testing.
 
 ## Live demo
 
