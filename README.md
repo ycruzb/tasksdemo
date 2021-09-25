@@ -4,7 +4,7 @@ The demo has been developed in **React** using **Next.js** and **Typescript**, s
 
 ## Live demo
 
-[TasksDemo](https://tasksdemo.vercel.app/)
+[https://tasksdemo.vercel.app/](https://tasksdemo.vercel.app/)
 
 # Installation
 
