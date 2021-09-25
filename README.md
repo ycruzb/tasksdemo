@@ -1,8 +1,10 @@
 # Information
 
-The demo has been developed in **React** using **Next.js** and **Typescript**, styling with **TailwindCSS**, storing the data in **Supabase** including realtime integration and deployed with CI/CD on **Vercel**. It was used **Jest** and **React Testing Library** for unit testing and **Cypress** for integration and E2E testing.
+The demo has been developed in **React** using **Next.js** and **Typescript**, styling with **TailwindCSS**, storing the data in **Supabase** including real time integration and deployed with CI/CD on **Vercel**. It was used **Jest** and **React Testing Library** for unit testing and **Cypress** for integration and E2E testing.
 
 ## Live demo
+
+You can open two browsers and try to add a new task on one of them and will see how the new task is added at the same time on both browsers being updated at real time.
 
 [https://tasksdemo.vercel.app/](https://tasksdemo.vercel.app/)
 
