@@ -2,6 +2,10 @@
 
 The demo has been developed in **React** using **Next.js** and **Typescript**, styling with **TailwindCSS** and storing the data in **Supabase** including realtime integration. It was used **Jest** and **React Testing Library** for unit testing and **Cypress** for integration and E2E testing.
 
+## Live demo
+
+[TasksDemo](https://tasksdemo.vercel.app/)
+
 # Installation
 
 1. Clone the repo
