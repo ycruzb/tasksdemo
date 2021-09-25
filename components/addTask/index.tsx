@@ -55,17 +55,17 @@ const AddTask = () => {
 		return arr.join(" ");
 	}
 
-	const parentClasses = hasFocus ? "group rounded-t-md rounded-b-none border-[1px] border-white shadow-md border-gray-100 relative" : "group rounded-md border-[1px] border-white relative"
+	const parentClasses = hasFocus ? "w-full group rounded-t-md rounded-b-none border-[1px] border-white shadow-md border-gray-100 relative" : "w-full group rounded-md border-[1px] border-white relative"
 
 	return (
 		<div className={parentClasses}>
-			<div className="flex space-x-2 items-center px-3 py-2">
+			<div className="w-full flex space-x-2 items-center px-3 py-2">
 				<svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
 				</svg>
 
 				<div className="w-full relative">
-					{<div className="min-h-[24px]" dangerouslySetInnerHTML={{ __html: renderContent() }} />}{" "}
+					{<div className="w-full min-h-[24px]" dangerouslySetInnerHTML={{ __html: renderContent() }} />}{" "}
 					<textarea value={content} onChange={(e) => setContent(e.target.value)} onFocus={() => setFocus(true)} onBlur={() => setTimeout(() => setFocus(false), 50)} className="w-full border-none outline-none absolute top-0 left-0 opacity-30 cursor-text placeholder-gray-800 resize-none" placeholder="Type to add new task" onKeyPress={e => {
 						if (e.key === 'Enter')
 							e.preventDefault()

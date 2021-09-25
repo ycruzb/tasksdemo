@@ -1,7 +1,7 @@
-interface IProps {
+export interface IProps {
 	type: "primary" | "secondary" | "link",
 	icon?: JSX.Element | boolean,
-	text: string,
+	text?: string,
 	disabled?: boolean,
 	action?: Function
 }
@@ -21,7 +21,7 @@ const CustomButtom = ({ type = "primary", icon = false, text = "", disabled = fa
 			}
 
 	return (
-		<button className={buttonClasses} disabled={disabled} onClick={() => action()}>{icon} <span className="inline-block">{text}</span></button>
+		<button className={buttonClasses} disabled={disabled} onClick={() => action()}> {icon} <span className={(icon) ? "hidden xl:inline-block" : "inline-block"}> {text}</span></button >
 	)
 }
 
