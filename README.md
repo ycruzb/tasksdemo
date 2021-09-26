@@ -26,6 +26,13 @@ or
 
 `NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key`
 
+# Run the project
+
+`npm run dev`
+
+or
+
+`yarn dev`
 # Run unit tests
 
 `npm run test`
