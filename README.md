@@ -48,3 +48,9 @@ or
 or
 
 `yarn cypress`
+
+# Deployment
+
+1. Update your repo on Github.
+
+2. Sign up on [Vercel](https://vercel.com/) and follow the instructions to deploy a project from your GitHub repo, remember to config the environment variables as well.
