@@ -1,14 +1,10 @@
 import { useState, useRef, useEffect } from "react"
 import TaskActionBar from "../taskActionBar"
-import { supabase, ITask } from "../../hooks/useSupabase";
-import { useSetTasks } from "../../hooks/useTasks";
 
 const AddTask = () => {
 	const [content, setContent] = useState("");
 	const inputEl = useRef<HTMLInputElement>(null);
 	const [hasFocus, setFocus] = useState(false);
-
-	const { setTasks } = useSetTasks();
 
 	useEffect(() => {
 		if (document.hasFocus() && inputEl.current) {
@@ -17,19 +13,6 @@ const AddTask = () => {
 			}
 		}
 	}, []);
-
-	useEffect(() => {
-		const myTasksSubscription = supabase
-			.from<ITask>('tasks')
-			.on('INSERT', payload => {
-				setTasks((prev: ITask[]) => [payload.new, ...prev])
-			})
-			.subscribe()
-
-		return () => {
-			supabase.removeSubscription(myTasksSubscription)
-		}
-	}, [])
 
 	const emptyTaskContent = () => {
 		setContent("");
