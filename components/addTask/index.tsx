@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import TaskActionBar from "../taskActionBar"
+import { addTask } from "../../hooks/useSupabase"
 
 const AddTask = () => {
 	const [content, setContent] = useState("");
@@ -38,6 +39,18 @@ const AddTask = () => {
 		return arr.join(" ");
 	}
 
+	const addTaskHandle = async () => {
+		if (content !== "") {
+			const { error, task } = await addTask(content);
+			if (!error) {
+				emptyTaskContent();
+
+			} else {
+				console.log("Error: ", error.message)
+			}
+		}
+	}
+
 	const parentClasses = hasFocus ? "w-full group rounded-t-md rounded-b-none border-[1px] border-white shadow-md border-gray-100 relative" : "w-full group rounded-md border-[1px] border-white relative"
 
 	return (
@@ -50,8 +63,10 @@ const AddTask = () => {
 				<div className="w-full relative">
 					{<div className="w-full min-h-[24px]" dangerouslySetInnerHTML={{ __html: renderContent() }} />}{" "}
 					<textarea value={content} onChange={(e) => setContent(e.target.value)} onFocus={() => setFocus(true)} onBlur={() => setTimeout(() => setFocus(false), 50)} className="w-full border-none outline-none absolute top-0 left-0 opacity-30 cursor-text placeholder-gray-800 resize-none" placeholder="Type to add new task" onKeyPress={e => {
-						if (e.key === 'Enter')
+						if (e.key === 'Enter') {
 							e.preventDefault()
+							addTaskHandle();
+						}
 					}} />
 				</div>
 
